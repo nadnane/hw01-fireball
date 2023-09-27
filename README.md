@@ -1,5 +1,22 @@
 # [Project 1: Noise](https://github.com/CIS-566-Fall-2022/hw01-fireball-base)
 
+
+## Project Description
+
+For this project, I wanted to create a fireball with some personality! :D I ended up creating two separate Iconospheres for my little fireball dude (I wanted to make something that looked like calcifer, but with a twist! Perhaps this is Calcifer's long lost cousin :D). First, I created the fireball core (which has firey eyes) by following these examples on ShaderToy:
+https://www.shadertoy.com/view/XsXSWS
+https://www.shadertoy.com/view/stjSDz
+
+I applied a low-frequency, high-amp displacememnt via fbm and the sin function in my vertex shader. I also used a high frequency, low amp fbm to create a distorted animation on the surface of the outer and inner flames. Finally, I applied a gradient of colors using the displacement passed in from the fragment shader with some Worley noise and impulse to create a cool effect, which uses the user-specified color passed in from the GUI controls. Both the vertex positions and colors use the uniform time variable to create an animated effect.
+I used the following toolbox functions across my shaders, in addition to various noise functions:
+- impulse
+- triangle wave
+- smoothstep
+- bias
+- sin/cos
+
+
+
 ## Objective
 
 Get comfortable with using WebGL and its shaders to generate an interesting 3D, continuous surface using a multi-octave noise algorithm.

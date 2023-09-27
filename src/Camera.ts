@@ -14,6 +14,16 @@ class Camera {
   target: vec3 = vec3.create();
   up: vec3 = vec3.create();
 
+  reset()
+  {
+    this.controls = CameraControls(document.getElementById('canvas'), {
+      eye: vec3.fromValues(0, 0, 5),
+      center: vec3.create(),
+    });
+    vec3.add(this.target, this.position, this.direction);
+    mat4.lookAt(this.viewMatrix, this.controls.eye, this.controls.center, this.controls.up);
+  }
+
   constructor(position: vec3, target: vec3) {
     this.controls = CameraControls(document.getElementById('canvas'), {
       eye: position,
