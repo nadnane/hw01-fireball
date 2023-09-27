@@ -17,6 +17,8 @@ I used the following toolbox functions across my shaders, in addition to various
 
 
 
+Nadine Adnane
+
 ## Objective
 
 Get comfortable with using WebGL and its shaders to generate an interesting 3D, continuous surface using a multi-octave noise algorithm.
